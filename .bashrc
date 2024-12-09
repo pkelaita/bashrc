@@ -21,7 +21,7 @@ alias brcc="source ~/.bashrc"
 alias path="sed 's/:/\n/g' <<< \"$PATH\""
 
 # Git
-alias gits="grep -i 'alias.*\"git \|git.*alias' ~/.bashrc | grep -v 'alias gits=' | sed 's/^alias //'"
+alias gits="grep -iE '^alias .*git ' ~/.bashrc | grep -v 'alias gits=' | sed 's/^alias //'"
 alias gl="git log --oneline -n 25"
 alias gs="git status"
 alias gd="git diff"
@@ -31,6 +31,7 @@ alias gp="git push"
 alias gb="git branch"
 alias gc="git checkout"
 alias gr="git restore --staged"
+alias gi='f() { git rebase -i HEAD~$1; unset -f f; }; f'
 alias gre="git rebase"
 alias gam="git commit --amend"
 alias gbc="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d" # branch cleanup
