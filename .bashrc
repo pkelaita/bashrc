@@ -50,9 +50,18 @@ alias mdb='/usr/local/bin/mongod --dbpath ~/data/db'
 alias ds="open -a Docker"
 alias dc="docker compose"
 alias code='open -b com.microsoft.VSCode "$@"' # https://github.com/microsoft/vscode/issues/60579
+alias c="cursor ."
 alias 1p="op" # 1Password
 
 # Misc
 alias rm='rm -i' # protect from accidental deletion
 alias clearcache='read -p "Confirm (y/n): " confirm && [ "$confirm" = "y" ] && sudo rm -rf ~/Library/Caches/* /Library/Caches/*'
+
+yank() {
+    if [ $# -eq 0 ]; then
+        fc -ln -1 | bash | awk '{printf "%s", $0}' | pbcopy
+    else
+        "$@" | awk '{printf "%s", $0}' | pbcopy
+    fi
+}
 
