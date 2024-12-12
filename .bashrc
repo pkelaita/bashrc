@@ -38,6 +38,7 @@ alias gbc="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d" # bran
 
 # Python
 alias ve="source venv/bin/activate"
+alias vv="python3 -m venv venv"
 alias python="python3"
 alias pclear="pip freeze | xargs pip uninstall -y"
 
