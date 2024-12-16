@@ -57,6 +57,7 @@ alias 1p="op" # 1Password
 # Misc
 alias rm='rm -i' # protect from accidental deletion
 alias clearcache='read -p "Confirm (y/n): " confirm && [ "$confirm" = "y" ] && sudo rm -rf ~/Library/Caches/* /Library/Caches/*'
+alias mf="make fix"
 
 yank() {
     if [ $# -eq 0 ]; then
