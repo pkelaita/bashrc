@@ -59,6 +59,7 @@ alias rm='rm -i' # protect from accidental deletion
 alias clearcache='read -p "Confirm (y/n): " confirm && [ "$confirm" = "y" ] && sudo rm -rf ~/Library/Caches/* /Library/Caches/*'
 alias mf="make fix"
 
+# Copies the output of $0, or of the previous command if not given
 yank() {
     if [ $# -eq 0 ]; then
         fc -ln -1 | bash | awk '{printf "%s", $0}' | pbcopy
