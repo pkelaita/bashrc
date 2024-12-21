@@ -43,8 +43,8 @@ alias python="python3"
 alias pclear="pip freeze | xargs pip uninstall -y"
 
 # Web Dev
-alias shad="npx shadcn@latest"
-alias sinit="npx shadcn@latest init --src-dir"
+alias shad="pnpm dlx shadcn@latest"
+alias sinit="pnpm dlx shadcn@latest init --src-dir"
 
 # Applications
 alias mdb='/usr/local/bin/mongod --dbpath ~/data/db'
