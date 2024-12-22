@@ -45,6 +45,7 @@ alias pclear="pip freeze | xargs pip uninstall -y"
 # Web Dev
 alias shad="pnpm dlx shadcn@latest"
 alias sinit="pnpm dlx shadcn@latest init --src-dir"
+alias mf="make fix"
 
 # Applications
 alias mdb='/usr/local/bin/mongod --dbpath ~/data/db'
@@ -57,7 +58,8 @@ alias 1p="op" # 1Password
 # Misc
 alias rm='rm -i' # protect from accidental deletion
 alias clearcache='read -p "Confirm (y/n): " confirm && [ "$confirm" = "y" ] && sudo rm -rf ~/Library/Caches/* /Library/Caches/*'
-alias mf="make fix"
+alias ttr="tput rmam"
+alias tts="tput smam"
 
 # Copies the output of $0, or of the previous command if not given
 yank() {
