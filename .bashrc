@@ -70,6 +70,7 @@ alias rm='rm -i' # protect from accidental deletion
 alias clearcache='read -p "Confirm (y/n): " confirm && [ "$confirm" = "y" ] && sudo rm -rf ~/Library/Caches/* /Library/Caches/*'
 alias ttr="tput rmam"
 alias tts="tput smam"
+alias make='make -j $(sysctl -n hw.logicalcpu)' # Parallelize make
 
 # Copies the output of $0, or of the previous command if not given
 yank() {
